@@ -1,0 +1,22 @@
+[
+    {
+        "navlink":"/",
+        "content":"Inicio"
+    },
+    {
+        "navlink": "/categorias/ryzen-3",
+        "content": "Ryzen 3"
+    },
+    {
+        "navlink": "/categorias/ryzen-5",
+        "content": "Ryzen 5"
+    },
+    {
+        "navlink": "/categorias/ryzen-7",
+        "content": "Ryzen 7"
+    },
+    {
+        "navlink": "/categorias/ryzen-9",
+        "content": "Ryzen 9"
+    }
+]

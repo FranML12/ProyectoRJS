@@ -1,0 +1,7 @@
+.productDetail{
+    display: flex;
+    flex-wrap: wrap;
+}
+.productDetail .img{
+    margin: 0 auto;
+}

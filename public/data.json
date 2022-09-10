@@ -1,0 +1,81 @@
+[
+    {
+        "id":1,
+        "nameS": "Ryzen 3 3100",
+        "description":"asdasdasd",
+        "imageS":"./assets/ryzen3.jpg",
+        "price":1501,
+        "stock":2,
+        "initial":1,
+        "category":"ryzen-3"
+    },
+    {
+        "id":2,
+        "nameS": "Ryzen 3 3300x",
+        "description":"asdasdasd",
+        "imageS":"./assets/ryzen3-1.jpg",
+        "price":1502,
+        "stock":5,
+        "initial":1,
+        "category":"ryzen-3"
+    },
+    {
+        "id":3,
+        "nameS": "Ryzen 5 3600",
+        "imageS":"./assets/ryzen5.jpeg",
+        "price":1500,
+        "stock":15,
+        "initial":1,
+        "category":"ryzen-5"
+    },
+    {
+        "id": 4,
+        "nameS": "Ryzen 5 5600x",
+        "description":"asdasdasd",
+        "imageS":"./assets/ryzen5-1.jpeg",
+        "price":1504,
+        "stock":13,
+        "initial":1,
+        "category":"ryzen-5"
+    },
+    {
+        "id":5,
+        "nameS": "Ryzen 7 3700x",
+        "description":"asdasdasd",
+        "imageS":"./assets/ryzen7.jpeg",
+        "price":1505,
+        "stock":12,        
+        "initial":1,
+        "category":"ryzen-7"
+    },
+    {
+        "id":6,
+        "nameS": "Ryzen 7 5800x",
+        "description":"asdasdasd",
+        "imageS":"./assets/ryzen7-1.jpeg",
+        "price":1506,
+        "stock":7,
+        "initial":1,
+        "category":"ryzen-7"
+    },
+    {
+        "id":7,
+        "nameS": "Ryzen 9 3950x",
+        "description":"asdasdasd",
+        "imageS":"./assets/ryzen9.jpg",
+        "price":1507,
+        "stock":2,
+        "initial":1,
+        "category":"ryzen-9"
+    },
+    {
+        "id":8,
+        "nameS": "Ryzen 9 5900x",
+        "description":"asdasdasd",
+        "imageS":"./assets/ryzen9-1.jpg",
+        "price":1508,
+        "stock":19,
+        "initial":1,
+        "category":"ryzen-9"
+    }
+]

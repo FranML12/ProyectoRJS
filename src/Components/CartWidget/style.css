@@ -1,0 +1,8 @@
+div img{
+    width: 100px;
+    display: flex;
+    margin-right: auto;
+}
+.color{
+    color: black;
+}

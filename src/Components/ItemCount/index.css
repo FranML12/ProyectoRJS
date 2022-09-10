@@ -1,0 +1,28 @@
+.button{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+}
+.label i {
+    margin: 20px;
+}
+.label{
+    margin-bottom: 5px;
+}
+.buttonSecondary{
+    outline: none;
+    border: none;
+    background-color: green;
+    color: white;
+    font-weight: 700;
+    padding: 2px;
+    border-radius: 5px;
+}
+.finCompra{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    background-color: green;
+    border-radius: 10px;
+}
