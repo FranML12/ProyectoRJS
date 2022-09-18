@@ -1,7 +1,7 @@
 import './style.css';
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CardDetail from "../Components/CardDetail/CardDetail";
+import CardDetail from "../Components/ItemDetail/ItemDetail";
 const getCard = async (setProductos) => {
     try {
         let response = await fetch('../data.json');
@@ -12,21 +12,21 @@ const getCard = async (setProductos) => {
     }
 }
 
-const CardDetailContainer = () => {
-    const [productos, setProductos] = useState([]);
-    useEffect(() => {
+const ItemDetailContainer = () => {
+    const [producto, setProducto] = useState([]);
+    useEffect(() => {                   
         setTimeout(() => {
-            getCard(setProductos);
+            getCard(setProducto);
         }, 2000)
-    }, [productos]);
+    }, [producto]);
     const { idProducto } = useParams();
-    if (productos.length === 0){
+    if (producto.length === 0){
         return <p>Loading...</p>
     }
     return <>
         <div className="container mt-3">
             <div className="row">
-                {productos.map(item => {
+                {producto.map(item => {
                     return (
                         item.id === parseInt(idProducto) && <CardDetail item={item} key={item} />
                     )
@@ -35,4 +35,4 @@ const CardDetailContainer = () => {
         </div>
     </>
 }
-export default CardDetailContainer; 
+export default ItemDetailContainer; 

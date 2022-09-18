@@ -1,10 +1,10 @@
 import './index.css';
-import Render from '../CartWidget/CartWidget';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import CartWidget from '../CartWidget/CartWidget';
 const Navbar = () => {
     const bars = () => {
         document.getElementById('nav').classList.toggle('ul-nav-show');
@@ -23,7 +23,7 @@ const Navbar = () => {
     return <>
         <nav className='nav'>
             <Link to={"/"} className="a">
-                <h1 className='mt-2'>E-commerce</h1>
+                <h1 className='mt-2'>TecnoStore</h1>
             </Link>
             <ul className='ul-nav' id='nav'>
                 {navMenus.map(navZ => {
@@ -36,7 +36,7 @@ const Navbar = () => {
                     )
                 })}
             </ul>
-            <Render />
+            <CartWidget />
             <FontAwesomeIcon icon={faBars} className='fa-2x mt-3 bars' id="bars" onClick={bars} />
         </nav>
     </>

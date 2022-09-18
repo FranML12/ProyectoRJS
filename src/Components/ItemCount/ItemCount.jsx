@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import './index.css';
-const ButtonNumber = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
     const [valor, setValor] = useState(parseInt(initial));
     const [initialS, setInitialS] = useState(parseInt(initial));
     const [stockS, setStock] = useState(parseInt(stock));
@@ -39,4 +39,4 @@ const ButtonNumber = ({ stock, initial, onAdd }) => {
         )
     }
 }
-export default ButtonNumber;
+export default ItemCount;

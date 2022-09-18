@@ -1,6 +1,6 @@
 import './style.css';
 import { useState, useEffect } from 'react';
-import Cards from './Cards';
+import Items from './Items';
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
     const componentLoad = async () => {
@@ -21,7 +21,7 @@ const ItemListContainer = () => {
         return <p>Loading...</p>
     }
     return <>
-        <Cards items={productos} key="products" />
+        <Items items={productos} key="products" />
     </>
 }
 export default ItemListContainer;

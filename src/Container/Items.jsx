@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
-import Card from '../Components/Card/Card.jsx';
-const Cards = ({ items }) => {
+import Item from '../Components/Item/Item.jsx';
+const Items = ({ items }) => {
     const { idCategoria } = useParams();
     if (idCategoria !== undefined) {
         return (
@@ -8,7 +8,7 @@ const Cards = ({ items }) => {
                 <div className="row">
                     {items.map(item => {
                         return (
-                            item.category === idCategoria && <Card item={item} key={item.id} />
+                            item.category === idCategoria && <Item item={item} key={item.id} />
                         )
                     })}
                 </div>
@@ -21,7 +21,7 @@ const Cards = ({ items }) => {
                 <div className="row">
                     {items.map((productos) => {
                         return (
-                            <Card item={productos} key={productos.id} />
+                            <Item item={productos} key={productos.id} />
                         )
                     })}
                 </div>
@@ -29,4 +29,4 @@ const Cards = ({ items }) => {
         )
     }
 }
-export default Cards;  //
+export default Items; 
