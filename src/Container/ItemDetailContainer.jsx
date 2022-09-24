@@ -13,20 +13,20 @@ const getCard = async (setProductos) => {
 }
 
 const ItemDetailContainer = () => {
-    const [producto, setProducto] = useState([]);
-    useEffect(() => {                   
+    const [productos, setProductos] = useState([]);
+    useEffect(() => {
         setTimeout(() => {
-            getCard(setProducto);
+            getCard(setProductos);
         }, 2000)
-    }, [producto]);
+    }, [productos]);
     const { idProducto } = useParams();
-    if (producto.length === 0){
+    if (productos.length === 0){
         return <p>Loading...</p>
     }
     return <>
         <div className="container mt-3">
             <div className="row">
-                {producto.map(item => {
+                {productos.map(item => {
                     return (
                         item.id === parseInt(idProducto) && <CardDetail item={item} key={item} />
                     )

@@ -1,13 +1,21 @@
 import './style.css';
 import { useState, useEffect } from 'react';
 import Items from './Items';
+import {getFirestore, collection, getDocs} from 'firebase/firestore';
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
     const componentLoad = async () => {
         try {
             let response = await fetch('../data.json');
-            let data = await response.json();
-            setProductos(data);
+            const db = getFirestore();
+            const items = collection(db,'items');
+            getDocs(items).then((snapshot) => {
+                const docs = snapshot.docs.map((doc) => ({
+                    id:doc.id,
+                    ...doc.data()
+                }))
+                setProductos(docs);
+            })
         } catch (e) {
             console.log(e);
         }
