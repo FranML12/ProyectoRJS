@@ -1,0 +1,13 @@
+.card-img{
+    max-width: 200px;
+}
+.detalle{
+    border: none;
+    outline: none;
+    background-color: green;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+}
