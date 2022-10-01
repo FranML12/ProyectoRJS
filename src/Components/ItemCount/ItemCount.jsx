@@ -2,12 +2,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2';
 import './index.css';
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd, id, nameS, price, imageS }) => {
     const [valor, setValor] = useState(parseInt(initial));
     const [initialS, setInitialS] = useState(parseInt(initial));
     const [stockS, setStock] = useState(parseInt(stock));
-    const [cambio, setCambio] = useState(false);
-    if (cambio === false) {
+    const [changeMessage, setChange] = useState(false);
+    if (changeMessage === false) {
         return <>
             <div className="button">
                 <label htmlFor="" className="label">Cantidad {stockS}<button onClick={() => {
@@ -22,15 +22,15 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                         setInitialS(valor + 1);
                     }
                 }}>+</button></label>
-                 <button className="buttonSecondary" onClick={(e) => {
+                <button className="buttonSecondary" onClick={(e) => {
                     if (valor <= stockS && valor > 0) {
                         onAdd(id, valor, nameS, imageS, price);
                         setStock(stockS - valor);
-                        setCambio(true);
+                        setChange(true);
                         Swal.fire({
                             position: 'top-end',
                             icon: 'success',
-                            title: 'Se compró con éxito',
+                            title: 'Se añadió al carrito con éxito',
                             showConfirmButton: false,
                             timer: 1000
                           })

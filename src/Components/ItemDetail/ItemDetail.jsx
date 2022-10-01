@@ -1,5 +1,5 @@
 import './style.css';
-import ButtonNumber from '../ItemCount/ItemCount';
+import ItemCount from '../ItemCount/ItemCount';
 import { useCartContext } from '../Context/CartContext';
 const ItemDetail = ({ item }) => {
     const { addProducts, products, findIndexToAddQuantity  } = useCartContext();
@@ -19,7 +19,7 @@ const ItemDetail = ({ item }) => {
                     <h4 className='text-danger'>{products[findIndex].nameS}</h4>
                     <p className='text-danger'>${products[findIndex].price}</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos obcaecati unde qui illum adipisci, molestiae corporis illo nobis nisi, veritatis dolor eius odit laudantium ipsum tempora maxime aliquid tenetur sit distinctio praesentium maiores repellat. Reiciendis hic soluta possimus eveniet quia corporis mollitia, ratione accusamus minus non atque veritatis odit similique.</p>
-                    <ButtonNumber stock={stock - products[findIndex].quantity} initial={initial} onAdd={onAdd} id={products[findIndex].id} nameS={products[findIndex].nameS} imageS={products[findIndex].imageS} price={products[findIndex].price} />
+                    <ItemCount stock={stock - products[findIndex].quantity} initial={initial} onAdd={onAdd} id={products[findIndex].id} nameS={products[findIndex].nameS} imageS={products[findIndex].imageS} price={products[findIndex].price} />
                 </div>
             </div>
         )
@@ -35,7 +35,7 @@ const ItemDetail = ({ item }) => {
                     <h4 className='text-danger'>{nameS}</h4>
                     <p className='text-danger'>${price}</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos obcaecati unde qui illum adipisci, molestiae corporis illo nobis nisi, veritatis dolor eius odit laudantium ipsum tempora maxime aliquid tenetur sit distinctio praesentium maiores repellat. Reiciendis hic soluta possimus eveniet quia corporis mollitia, ratione accusamus minus non atque veritatis odit similique.</p>
-                    <ButtonNumber stock={stock} initial={initial} onAdd={onAdd} id={id} nameS={nameS} imageS={imageS} price={price} />
+                    <ItemCount stock={stock} initial={initial} onAdd={onAdd} id={id} nameS={nameS} imageS={imageS} price={price} />
                 </div>
             </div>
         )

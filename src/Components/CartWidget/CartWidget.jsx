@@ -8,7 +8,8 @@ const CartWidget = () => {
     const { getTotalQuantity } = useCartContext();
     return <>
         <div className='ms-auto'>
-        <Link to="/cart" className='color'><FontAwesomeIcon icon={faCartShopping} className="fa-2x mt-3 me-3" />{getTotalQuantity()}</Link>        </div>
+            <Link to="/cart" className='color'><FontAwesomeIcon icon={faCartShopping} className="fa-2x mt-3 me-3" />{getTotalQuantity()}</Link>        
+        </div>
     </>
 }
 export default CartWidget;
